@@ -7,7 +7,8 @@ npm run build
 ### Creating link
 
 ```sh
-npm link
+sudo npm link
+
 ```
 
 ### Locally install in another project
