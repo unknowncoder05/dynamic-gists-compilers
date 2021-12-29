@@ -1,0 +1,32 @@
+{
+    "renderInputs":{
+        "functionName":{"type":"str", "default":"hello_world"},
+        "aFunctionName":{"type":"str", "default":"function_a"},
+        "bFunctionName":{"type":"str", "default":"function_b"},
+        "separator":{"type":"str", "default":" "}
+    },
+    "type":"function",
+    "name":"##functionName##",
+    "imports":[
+        {"from": "hello.a", "import":"##aFunctionName##"},
+        {"from": "world.b", "import":"##bFunctionName##"}
+
+    ],
+    "code":[
+        {
+            "type":"variable",
+            "name":"a",
+            "expression":"##aFunctionName##()"
+        },
+        {
+            "type":"variable",
+            "name":"b",
+            "expression":"##bFunctionName##()"
+        },
+        {
+            "type":"functionCall",
+            "function":"print",
+            "args":["f'{a}##separator##{b}'"]
+        }
+    ]
+}

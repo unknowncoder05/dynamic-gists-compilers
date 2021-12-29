@@ -1,0 +1,28 @@
+{
+    "requires":[
+        {
+            "from": "./helloWorld.json",
+            "import": "*",
+            "as":"hello_world"
+        }
+    ],
+    "type":"code",
+    "code":[
+        "##:hello_world##",
+        {
+            "type":"if",
+            "condition":"__name__ == '__main__'",
+            "code":[
+                {
+                    "type":"functionCall",
+                    "function":"##functionName##"
+                },
+                {
+                    "type":"functionCall",
+                    "function":"##hello_world.name##"
+                },
+                "##:hello_world.code.0##"
+            ]
+        }
+    ]
+}

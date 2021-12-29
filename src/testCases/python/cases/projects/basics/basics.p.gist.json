@@ -1,0 +1,25 @@
+{
+    "name":"basics",
+    "files":[
+        {
+            "path":"./src/main.gist.json",
+            "args":{
+                "separator":"-",
+                "aFunctionName":"function_a",
+                "bFunctionName":"function_b"
+            }
+        },
+        {
+            "path":"./src/hello/a.gist.json",
+            "args":{
+                "mainValue":"Hello"
+            }
+        },
+        {
+            "path":"./src/world/b.gist.json",
+            "args":{
+                "mainValue":"World!"
+            }
+        }
+    ]
+}

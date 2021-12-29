@@ -1,0 +1,29 @@
+{
+    "renderInputs":{
+        "function_name":{"type":"str", "default":"sum"},
+        "variable_result":{"type":"str", "default":"result"},
+        "variable_number_a":{"type":"str", "default":"number_a"},
+        "variable_number_b":{"type":"str", "default":"number_b"}
+    },
+    "type":"function",
+    "name":"##function_name##",
+    "args":[
+        {"type":"float", "name":"##variable_number_a##"},
+        {"type":"float", "name":"##variable_number_b##"}
+    ],
+    "returnTypes":[
+        "str"
+    ],
+    "code":[
+        {
+            "type":"variable",
+            "variableType":"float",
+            "name":"##variable_result##",
+            "expression":"##variable_number_a## + ##variable_number_b##"
+        },
+        {
+            "type":"return",
+            "expressions": ["##variable_result##"]
+        }
+    ]
+}

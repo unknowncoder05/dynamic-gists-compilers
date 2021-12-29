@@ -1,0 +1,14 @@
+{
+    "renderInputs":{
+        "functionName":{"type":"str", "default":"function_a"},
+        "value":{"type":"str", "default":"a"}
+    },
+    "type":"function",
+    "name":"##functionName##",
+    "code":[
+        {
+            "type":"return",
+            "expressions":["'##value##'"]
+        }
+    ]
+}

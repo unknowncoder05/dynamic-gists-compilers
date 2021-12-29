@@ -1,0 +1,47 @@
+{
+    "renderInputs":{
+        "mainRoute":{"type":"str", "default":"/"},
+        "mainRouteFunctionName":{"type":"str", "default":"hello"},
+        "mainRouteMessage":{"type":"str", "default":"Hello World!"}
+    },
+    "type":"code",
+    "imports":[
+        {
+            "from": "flask",
+            "import": "Flask"
+        }
+    ],
+    "code":[
+        {
+            "type":"variable",
+            "name":"app",
+            "expression":"Flask(__name__)"
+        },
+        {
+            "type":"function",
+            "name":"##mainRouteFunctionName##",
+            "decorators":[{
+                "name": "app.route",
+                "args": [
+                    "'##mainRoute##'"
+                ]
+            }],
+            "code":[
+                {
+                    "type":"return",
+                    "expressions": ["'##mainRouteMessage##'"]
+                }
+            ]
+        },
+        {
+            "type":"if",
+            "condition":"__name__ == '__main__'",
+            "code":[
+                {
+                    "type":"functionCall",
+                    "function":"app.run"
+                }
+            ]
+        }
+    ]
+}
